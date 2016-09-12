@@ -106,7 +106,6 @@ public class ListCountryFragment extends Fragment implements CountryAdapter.OnIt
 
     private void showProgressDialog() {
         progressDialog = ProgressDialog.show(getActivity(), getString(R.string.title_aguarde), getString(R.string.title_carregando), true);
-
         progressDialog.show();
     }
 
