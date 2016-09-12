@@ -78,13 +78,13 @@ public class DetailPaisFragment extends Fragment {
         cbVisitouPais.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (((CheckBox) v).isChecked()) {
-                    btnSave.setEnabled(true);
-                    edtDataVisited.setVisibility(View.VISIBLE);
-                } else {
-                    btnSave.setEnabled(false);
-                    edtDataVisited.setVisibility(View.GONE);
-                }
+             if (((CheckBox) v).isChecked()) {
+                 btnSave.setEnabled(true);
+                 edtDataVisited.setVisibility(View.VISIBLE);
+             } else {
+                 btnSave.setEnabled(false);
+                 edtDataVisited.setVisibility(View.GONE);
+             }
             }
         });
 
@@ -97,10 +97,10 @@ public class DetailPaisFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if (validarDados()) {
-                    persistCountry();
-                    getFragmentManager().popBackStack();
-                }
+             if (validarDados()) {
+                 persistCountry();
+                 getFragmentManager().popBackStack();
+             }
 
             }
         });
@@ -111,8 +111,8 @@ public class DetailPaisFragment extends Fragment {
         edtLongName.setText(this.country.getLongname());
         edtCallingCode.setText(this.country.getCallingCode());
 
-        String imagePaisUrl = ServiceUtil.URL_MYPUSH + "world/countries/" + this.country.getId() + "/flag";
-        Picasso.with(getActivity()).load(imagePaisUrl).into(ivBandeira);
+        String imageCountryUrl = ServiceUtil.URL_MYPUSH + "world/countries/" + this.country.getId() + "/flag";
+        Picasso.with(getActivity()).load(imageCountryUrl).into(ivBandeira);
 
 
         if (country.isVisited()) {

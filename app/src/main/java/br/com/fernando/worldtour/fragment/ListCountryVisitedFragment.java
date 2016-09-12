@@ -23,7 +23,7 @@ import br.com.fernando.worldtour.model.domain.User;
 /**
  * Created by fernando on 06/09/16.
  */
-public class ListarPaisesVisitadosFragment extends Fragment implements PaisVisitadoAdapter.OnItemClickListener {
+public class ListCountryVisitedFragment extends Fragment implements PaisVisitadoAdapter.OnItemClickListener {
 
     private ListView lvPaises;
     private Button btnDeletar;

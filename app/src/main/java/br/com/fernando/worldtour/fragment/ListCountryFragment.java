@@ -29,7 +29,7 @@ import br.com.fernando.worldtour.service.volley.MySingleton;
 /**
  * Created by fernando on 06/09/16.
  */
-public class ListarPaisesFragment extends Fragment implements CountryAdapter.OnItemClickListener {
+public class ListCountryFragment extends Fragment implements CountryAdapter.OnItemClickListener {
 
     private ListView lvPaises;
     private ProgressDialog progressDialog;
@@ -82,7 +82,7 @@ public class ListarPaisesFragment extends Fragment implements CountryAdapter.OnI
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e(ListarPaisesFragment.class.getName(), "Erro ao listar Países, erro: " + error.getMessage());
+                Log.e(ListCountryFragment.class.getName(), "Erro ao listar Países, erro: " + error.getMessage());
                 Toast.makeText(getActivity(),getString(R.string.erro_listar_paises),Toast.LENGTH_SHORT).show();
                 ;            }
         });

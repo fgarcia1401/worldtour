@@ -21,8 +21,8 @@ import com.squareup.picasso.Picasso;
 
 import br.com.fernando.worldtour.R;
 import br.com.fernando.worldtour.controller.UserController;
-import br.com.fernando.worldtour.fragment.ListarPaisesFragment;
-import br.com.fernando.worldtour.fragment.ListarPaisesVisitadosFragment;
+import br.com.fernando.worldtour.fragment.ListCountryFragment;
+import br.com.fernando.worldtour.fragment.ListCountryVisitedFragment;
 import br.com.fernando.worldtour.fragment.PerfilFragment;
 import br.com.fernando.worldtour.model.domain.User;
 import br.com.fernando.worldtour.util.MenuMain;
@@ -140,8 +140,8 @@ public class MainActivity extends Activity implements MenuMainAdapter.OnItemClic
                 fragmentManager = getFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
 
-                ListarPaisesFragment listarPaisesFragment = new ListarPaisesFragment();
-                fragmentTransaction.add(R.id.content_frame ,listarPaisesFragment, "listarPaisesFragment");
+                ListCountryFragment listCountryFragment = new ListCountryFragment();
+                fragmentTransaction.add(R.id.content_frame , listCountryFragment, "listCountryFragment");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 drawerLayout.closeDrawers();
@@ -150,8 +150,8 @@ public class MainActivity extends Activity implements MenuMainAdapter.OnItemClic
                 fragmentManager = getFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
 
-                ListarPaisesVisitadosFragment listarPaisesVisitadosFragment = new ListarPaisesVisitadosFragment();
-                fragmentTransaction.add(R.id.content_frame ,listarPaisesVisitadosFragment, "listarPaisesVisitadosFragment");
+                ListCountryVisitedFragment listCountryVisitedFragment = new ListCountryVisitedFragment();
+                fragmentTransaction.add(R.id.content_frame , listCountryVisitedFragment, "listCountryVisitedFragment");
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 drawerLayout.closeDrawers();
