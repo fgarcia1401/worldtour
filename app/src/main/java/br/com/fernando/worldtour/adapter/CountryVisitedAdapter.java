@@ -21,14 +21,14 @@ import br.com.fernando.worldtour.service.ServiceUtil;
 /**
  * Created by fernando on 03/09/16.
  */
-public class PaisVisitadoAdapter extends BaseAdapter{
+public class CountryVisitedAdapter extends BaseAdapter{
 
     private List<Country> paises;
     private List<Country> paisesSelecionados;
     private OnItemClickListener listener;
     private Context context;
 
-    public PaisVisitadoAdapter(Context context, List<Country> paises, OnItemClickListener listener) {
+    public CountryVisitedAdapter(Context context, List<Country> paises, OnItemClickListener listener) {
         this.context = context;
         this.paises = paises;
         this.listener = listener;
@@ -100,7 +100,6 @@ public class PaisVisitadoAdapter extends BaseAdapter{
                 .into(viewHolder.ivPais);
 
         viewHolder.tvPais.setText(country.getShortname());
-        viewHolder.cbVisited.setChecked(country.isSelected());
 
         return view;
     }

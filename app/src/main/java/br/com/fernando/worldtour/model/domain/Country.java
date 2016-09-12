@@ -18,7 +18,6 @@ public class Country implements Serializable {
     private String idFacebook;
     private String dataVisited;
     private boolean isVisited;
-    private boolean isSelected;
 
     public Long get_id() {
         return _id;
@@ -108,13 +107,6 @@ public class Country implements Serializable {
         isVisited = visited;
     }
 
-    public boolean isSelected() {
-        return isSelected;
-    }
-
-    public void setSelected(boolean selected) {
-        isSelected = selected;
-    }
 
     @Override
     public boolean equals(Object o) {

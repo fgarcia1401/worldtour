@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import br.com.fernando.worldtour.R;
-import br.com.fernando.worldtour.adapter.PaisVisitadoAdapter;
+import br.com.fernando.worldtour.adapter.CountryVisitedAdapter;
 import br.com.fernando.worldtour.controller.CountryVisitedController;
 import br.com.fernando.worldtour.controller.UserController;
 import br.com.fernando.worldtour.model.domain.Country;
@@ -23,7 +23,7 @@ import br.com.fernando.worldtour.model.domain.User;
 /**
  * Created by fernando on 06/09/16.
  */
-public class ListCountryVisitedFragment extends Fragment implements PaisVisitadoAdapter.OnItemClickListener {
+public class ListCountryVisitedFragment extends Fragment implements CountryVisitedAdapter.OnItemClickListener {
 
     private ListView lvPaises;
     private Button btnDeletar;
@@ -32,7 +32,7 @@ public class ListCountryVisitedFragment extends Fragment implements PaisVisitado
 
     private CountryVisitedController countryVisitedController;
     private UserController userController;
-    private PaisVisitadoAdapter paisVisitadoAdapter;
+    private CountryVisitedAdapter countryVisitedAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -48,13 +48,13 @@ public class ListCountryVisitedFragment extends Fragment implements PaisVisitado
         countryVisitedController = new CountryVisitedController(getActivity().getApplicationContext());
         userController = new UserController(getActivity().getApplicationContext());
 
-        listarPaises();
+        listCountry();
         listenerDeletar();
 
         return view;
     }
 
-    private void listarPaises() {
+    private void listCountry() {
         User userLogged = userController.getUserPreferences();
         listCountry = countryVisitedController.getAllCountryVisitedByIdFacebook(userLogged.getIdFacebook());
         carregarPaises();
@@ -62,8 +62,8 @@ public class ListCountryVisitedFragment extends Fragment implements PaisVisitado
     }
 
     private void carregarPaises() {
-        paisVisitadoAdapter = new PaisVisitadoAdapter(getActivity(), listCountry, this);
-        lvPaises.setAdapter(paisVisitadoAdapter);
+        countryVisitedAdapter = new CountryVisitedAdapter(getActivity(), listCountry, this);
+        lvPaises.setAdapter(countryVisitedAdapter);
     }
 
 
@@ -71,7 +71,7 @@ public class ListCountryVisitedFragment extends Fragment implements PaisVisitado
         btnDeletar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<Country> paises = paisVisitadoAdapter.getPaisesSelecionados();
+                List<Country> paises = countryVisitedAdapter.getPaisesSelecionados();
 
                 for(Country country :  paises) {
 
@@ -81,7 +81,7 @@ public class ListCountryVisitedFragment extends Fragment implements PaisVisitado
                     }
 
                 }
-                listarPaises();
+                listCountry();
                 carregarPaises();
             }
         });
