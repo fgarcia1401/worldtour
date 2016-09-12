@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">World Tour</string>
+
+    <string-array name="menus_names">
+        <item>Informações Perfil</item>
+        <item>Listagem de Países</item>
+        <item>Países Visitados</item>
+        <item>Logout Facebook</item>
+    </string-array>
+
+
+    <array name="menus_imgs">
+        <item>@drawable/ic_perm_identity_blue_700_36dp</item>
+        <item>@drawable/ic_public_blue_700_36dp</item>
+        <item>@drawable/ic_done_all_blue_700_36dp</item>
+        <item>@drawable/ic_power_settings_new_blue_700_36dp</item>
+    </array>
+
+    <string name="drawer_open">Abrir o navigation drawer</string>
+    <string name="drawer_close">Fechar o navigation drawer</string>
+    <string name="title_choose">Escolha uma opção</string>
+
+
+    <string name="facebook_app_id">911987375601110</string>
+    <string name="title_login_facebook">Logar no Facebook</string>
+    <string name="cancel_login">Login cancelado no Facebook</string>
+    <string name="error_login">Ocorreu um erro ao tentar logar com Facebook</string>
+    <string name="title_logout_facebook">Logout Facebook</string>
+
+    <string name="informacoes_do_perfil">Informações do Perfil</string>
+
+    <string name="title_aguarde">Aguarde</string>
+    <string name="title_carregando">Carregando</string>
+    <string name="erro_listar_paises">Falha ao listar Países, verique sua conexão e tente novamente!</string>
+
+
+    <string name="informacoes_do_pais">Informações do País</string>
+    <string name="menu_done">Salvar</string>
+    <string name="menu_cancel">Cancelar</string>
+    <string name="salvo_pais">País foi salvo com sucesso!</string>
+    <string name="erro_salvar_pais">Falha ao salvar País, tente novamente!</string>
+    <string name="data_visita_pais">Data visita</string>
+    <string name="chkVisitouPais">Já visitou o País?</string>
+    <string name="informar_data_visitou_pais">Favor informar data que visitou o País para salvar!</string>
+    <string name="editar_pais">Visita ao País editada com sucesso!</string>
+    <string name="paises_visitados">Países Visitados</string>
+    <string name="deletar">Deletar</string>
+
+
+</resources>

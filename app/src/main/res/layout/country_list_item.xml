@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    >
+
+    <ImageView
+        android:id="@+id/ivPais"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        />
+
+    <TextView
+        android:id="@+id/tvPais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#404040"
+        android:minHeight="?android:attr/listPreferredItemHeightSmall"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:layout_toRightOf="@id/ivPais"
+        android:layout_toEndOf="@+id/ivPais"
+        android:gravity="center"
+        android:maxLines="2"
+        />
+
+
+    <ImageView
+        android:id="@+id/ivVisited"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>
